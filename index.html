@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/flowbite@latest/dist/flowbite.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    
+    <title>Document</title>
+</head>
+<script>
+  // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+  if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+  } else {
+      document.documentElement.classList.remove('dark')
+  }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<body>
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="https://www.microsoft.com/pt-br" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="/Microsoft_icon.svg.png" class="h-8" alt="Flowbite Logo" />
+          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Microsoft</span>
+      </a>
+
+      <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+        <img id="theme-toggle-dark-icon" class="hidden w-5 h-5" src="https://img.icons8.com/ios-filled/50/moon-symbol.png" alt="Modo Escuro">
+        <img id="theme-toggle-light-icon" class="hidden w-5 h-5" src="https://img.icons8.com/ios-filled/50/sun--v1.png" alt="Modo Claro">
+          
+    </button>
+
+      
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="https://www.microsoft.com/pt-br" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Vagas</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Benefícios</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+        <section class="py-28">
+          <div
+            class="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8"
+          >
+          
+            <div class="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
+              <h2 class="text-4xl text-gray-800 font-extrabold md:text-5xl">
+                Construa o futuro na Microsoft.
+              </h2>
+              <p>
+                Na Microsoft, não criamos apenas tecnologia – criamos oportunidades para que pessoas e organizações alcancem seu potencial máximo. Venha fazer parte de uma equipe que transforma o mundo.
+              </p>
+              <div class="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
+                <a
+                  href="javascript:void(0)"
+                  class="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex"
+                  >Ver Vagas<svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="flex-none mt-14 md:mt-0 md:max-w-xl">
+              <img
+                src="/istockphoto-1446934118-612x612.jpg"
+                class="md:rounded-tl-[108px]"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+  </section>
+  
+  <section>
+    <section class="py-28" x-data="{ members: [
+      {
+        company_icon: '/Microsoft_icon.svg.png',
+        company_name: 'Microsoft',
+        job_title: 'Engenheiro de Software Sênior',
+        job_description: 'Desenvolva soluções inovadoras para o Azure.\n\nRequisitos:\n- Experiência com C#, .NET e Azure.\n- Conhecimento em arquitetura de microsserviços.\n- Inglês fluente.',
+        job_type: 'CLT',
+        location: 'Remoto (Brasil)',
+        path: 'javascript:void(0)'
+      },
+      {
+        company_icon: '/Microsoft_icon.svg.png',
+        company_name: 'Microsoft',
+        job_title: 'Especialista em Cybersecurity',
+        job_description: 'Proteja sistemas globais da Microsoft.\n\nRequisitos:\n- Certificação CISSP.\n- Experiência com LGPD e GDPR.',
+        job_type: 'PJ',
+        location: 'São Paulo, SP',
+        path: 'javascript:void(0)'
+      },
+      {
+        company_icon: '/Microsoft_icon.svg.png',
+        company_name: 'Microsoft',
+        job_title: 'Product Designer',
+        job_description: 'Projete experiências de usuário para o Microsoft 365.\n\nRequisitos:\n- Domínio do Figma ou Adobe XD.\n- Portfólio com projetos de UX/UI.',
+        job_type: 'CLT',
+        location: 'Remoto',
+        path: 'javascript:void(0)'
+      },
+      {
+        company_icon: '/Microsoft_icon.svg.png',
+        company_name: 'Microsoft',
+        job_title: 'Estágio em Marketing Digital',
+        job_description: 'Apoie campanhas globais da Microsoft.\n\nRequisitos:\n- Graduação em Marketing ou áreas afins.\n- Conhecimento em SEO e Google Analytics.',
+        job_type: 'Estágio',
+        location: 'Rio de Janeiro, RJ',
+        path: 'javascript:void(0)'
+      }
+  ]}">
+  
+        <div class="max-w-screen-lg mx-auto px-4 md:px-8">
+          <div class="max-w-md">
+            <h1 class="text-gray-800 text-2xl font-extrabold sm:text-3xl">
+              Vagas em Destaque
+            </h1>
+          </div>
+          <ul class="mt-12 divide-y space-y-3">
+            <template x-for="(item, idx) in members" :key="idx">
+              <li
+                class="px-4 py-5 duration-150 hover:border-white hover:rounded-xl hover:bg-gray-50"
+              >
+                <a :href="item.path" class="space-y-3 block">
+                  <div class="flex items-center gap-x-3">
+                    <div class="bg-white w-14 h-14 border rounded-full flex items-center justify-center">
+                        <img :src="item.company_icon" alt="Logo Microsoft" class="w-10 h-10 object-contain" />
+                      </div>
+                      
+                      <span class="block text-sm text-indigo-600 font-medium" x-text="item.company_name"></span>
+                      <h3 class="text-base text-gray-800 font-semibold mt-1" x-text="item.job_title"></h3>
+                    </div>
+                  </div>
+                  <p class="text-gray-600 sm:text-sm whitespace-pre-line" x-text="item.job_description"></p>
+                  <div class="text-sm text-gray-600 flex items-center gap-6">
+                    <span class="flex items-center gap-2">
+                      <!-- ícone de tipo de vaga -->
+                      <svg class="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 20 20">
+                        <path fill="#9CA3AF" d="..."/>
+                      </svg>
+                      <span x-text="item.job_type"></span>
+                    </span>
+                    <span class="flex items-center gap-2">
+                      <!-- ícone de localização -->
+                      <svg class="w-5 h-5 text-gray-500" fill="none" viewBox="0 0 20 20">
+                        <path fill="#9CA3AF" d="..."/>
+                      </svg>
+                      <span x-text="item.location"></span>
+                    </span>
+                  </div>
+                </a>
+              </li>
+            </template>
+          </ul>
+        </div>
+      </section>
+      
+  </section>
+
+  <div class="py-14">
+    <div class="max-w-screen-xl mx-auto px-4 md:px-8">
+        <h3 class="font-semibold text-sm text-gray-800 text-center">
+          Por que escolher a Microsoft?
+        </h3>
+        <div class="mt-6">
+          <ul class="flex gap-y-6 flex-wrap items-center justify-center [&>*]:px-12 lg:divide-x">
+            <li class="flex-none text-center max-w-[200px]">
+                <!-- Ícone -->
+                <img src="/2966486.png" alt="saúde icon" srcset="">
+                <!-- Texto -->
+                <p class="font-semibold text-sm text-gray-800">Plano de Saúde Global</p>
+                <p class="text-sm text-gray-600">Cobertura médica, dental e visual para você e sua família.</p>
+            </li>
+        
+            <li class="flex-none text-center max-w-[200px]">
+                <!-- Ícone -->
+                <img src="/download.png" alt="ações icon">
+                <!-- Texto -->
+                <p class="font-semibold text-sm text-gray-800">Ações da Empresa</p>
+                <p class="text-sm text-gray-600">Participe dos lucros com stock options.</p>
+            </li>
+        
+            <li class="flex-none text-center max-w-[200px]">
+                <!-- Ícone -->
+                <img src="/download (1).png" alt="Flexibilidade icon">
+                <!-- Texto -->
+                <p class="font-semibold text-sm text-gray-800">Flexibilidade</p>
+                <p class="text-sm text-gray-600">Trabalhe de onde quiser, com suporte para home office.</p>
+            </li>
+        
+            <li class="flex-none text-center max-w-[200px]">
+                <!-- Ícone -->
+                <img src="/11305832.png" alt="Aprendizado icon">
+                <!-- Texto -->
+                <p class="font-semibold text-sm text-gray-800">Aprendizado</p>
+                <p class="text-sm text-gray-600">Acesso ilimitado a treinamentos da Microsoft Learn.</p>
+            </li>
+        </ul>
+        
+        </div>
+    </div>
+</div>
+
+<section>
+  <div class="py-14">
+    <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+      <!-- Aqui é onde estava o problema: faltava o `flex` e `items-start` -->
+      <div class="flex flex-col lg:flex-row gap-12">
+        
+        <!-- Bloco de texto à esquerda -->
+        <div class="w-full lg:w-1/2 space-y-3 mt-0 text-left">
+          <h3 class="text-indigo-600 font-semibold">Contato</h3>  
+          <p>
+            Tem dúvidas sobre as vagas ou processos? Preencha o formulário abaixo e 
+            entraremos em contato.
+          </p>
+          <ul class="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center justify-start">
+            <template
+              x-for="(item, index) in contactMethods"
+              :key="index"
+            >
+              <li class="flex items-center gap-x-3">
+                <div
+                  class="flex-none text-gray-400"
+                  x-html="item.icon"
+                ></div>
+                <p x-text="item.contact"></p>
+              </li>
+            </template>
+          </ul>
+        </div>
+
+        <!-- Bloco do formulário à direita -->
+        <div class="w-full lg:w-1/2">
+          <form @submit.prevent class="space-y-10">
+            <div>
+              <label class="font-medium"> Nome Completo </label>
+              <input
+                type="text"
+                required
+                placeholder="Maria Silva"
+                class="mt-2 w-full px-4 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              />
+            </div>
+            <div>
+              <label class="font-medium"> Email </label>
+              <input
+                type="email"
+                required
+                placeholder="maria.silva@email.com"
+                class="mt-2 w-full px-4 py-2 text-gray-500 bg-transparent outline-none border shadow-sm rounded-lg"
+              />
+            </div>
+            <div>
+              <label class="font-medium"> Mensagem </label>
+              <textarea
+                required
+                placeholder="Escreva sua mensagem aqui..."
+                class="mt-2 w-full h-36 px-4 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
+              ></textarea>
+            </div>
+            <button
+              class="w-full px-4 py-2 text-white font-medium bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-600 rounded-lg duration-150"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="bg-white rounded-lg shadow-sm dark:bg-gray-900 m-4">
+  <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+      <div class="sm:flex sm:items-center sm:justify-between">
+          <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+              <img src="/Microsoft_icon.svg.png" class="h-8" alt="Flowbite Logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Microsoft</span>
+          </a>
+          <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+              <li>
+                  <a href="#" class="hover:underline me-4 md:me-6">Carreiras Globais</a>
+              </li>
+              <li>
+                  <a href="#" class="hover:underline me-4 md:me-6">Privacidade</a>
+              </li>
+              <li>
+                  <a href="#" class="hover:underline me-4 md:me-6">Termos de Uso</a>
+              </li>
+              <li>
+                  <a href="#" class="hover:underline">LinkedIn</a>
+              </li>
+          </ul>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">Microsoft™</a>. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
